@@ -1,17 +1,14 @@
 name: Greeting on variable day
 
 on:
-<<<<<<< HEAD
   push:
     branches: [ master ]
-  # pull_request:
-  #   branches: [ master ]
-=======
-  workflow_dispatch
->>>>>>> test env variable
+    
+  pull_request:
+    branches: [ master ]
 
-env:
-  DAY_OF_WEEK: Monday
+# env:
+#   DAY_OF_WEEK: Monday
 
 jobs:
   greeting_job:
@@ -19,7 +16,6 @@ jobs:
     env:
       Greeting: Hello
     steps:
-<<<<<<< HEAD
     - uses: actions/checkout@v2
 
     - name: Set up JDK 1.8
@@ -41,9 +37,3 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
          
-=======
-      - name: "Say Hello Mona it's Monday"
-        run: echo "$Greeting $First_Name. Today is $DAY_OF_WEEK!"
-        env:
-          First_Name: Mona
->>>>>>> test env variable
