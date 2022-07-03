@@ -1,4 +1,4 @@
-name: Java CI with Gradle
+name: Greeting on variable day
 
 on:
   push:
@@ -8,13 +8,10 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
-
-    runs-on: ${{matrix}}
-    strategy: 
-      matrix: 
-       os: [ubuntu-latest, windows-latest, macOS-latest]
-
+  greeting_job:
+    runs-on: ubuntu-latest
+    env:
+      Greeting: Hello
     steps:
     - uses: actions/checkout@v2
     - name: Set up JDK 1.8
