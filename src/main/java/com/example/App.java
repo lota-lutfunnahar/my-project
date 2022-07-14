@@ -18,8 +18,8 @@ public class App {
     public void init()
     {
         Logger log = LoggerFactory.getLogger(App.class);
-        log.info("Java app initiated");
-        printf("Java app running successfully")
+        log.info("Java app running successfully");
+        
     }
 
     public String getStatus() {
