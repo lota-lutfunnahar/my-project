@@ -3,14 +3,12 @@ name: Greeting on variable day
 on:
   push:
     branches: [ master ]
-<<<<<<< HEAD
     
   pull_request:
     branches: [ master ]
-=======
+
 #   pull_request:
 #     branches: [ master ]
->>>>>>> updated
 
 jobs:
   greeting_job:
